@@ -1,0 +1,62 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor {
+    width: 25em;
+    height: 4em;
+    border: 2px solid #eb7260;
+}
+
+#barra {
+    width: 0;
+    height: 100%;
+    animation: progreso 6s linear infinite;
+    background: #eb7260;
+}
+
+#texto {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+    width: 12.5em;
+    height: 100%;
+    text-align: center;
+    color: #eb7260;
+    mix-blend-mode: multiply;
+}
+
+#texto:after {
+    content: '0%';
+    animation: porcentaje 6s linear infinite;
+}
+
+@keyframes progreso {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes porcentaje {
+    0% {
+        content: '0%';
+    }
+    25% {
+        content: '25%';
+    }
+    50% {
+        content: '50%';
+    }
+    75% {
+        content: '75%';
+    }
+    100% {
+        content: '100%';
+    }
+}
